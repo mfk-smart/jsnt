@@ -12,76 +12,50 @@
             "reload":{
                "type":"$network.request",
                "options":{
-                  "url":"http://fureliza.herokuapp.com/messages",
+                  "url":"https://raw.githubusercontent.com/mfk-smart/jsnt/master/hellojsnt.json",
                   "method":"get"
-               },
-               "success":{
-                  "type":"$render"
-               }
-            },
-            "say":{
-               "type":"$network.request",
-               "options":{
-                  "method":"post",
-                  "url":"http://fureliza.herokuapp.com/messages",
-                  "data":{
-                     "text":"{{$get.message}}"
-                  }
                },
                "success":{
                   "type":"$render"
                }
             }
          },
-         "templates":{
-            "body":{
-               "style":{
-                  "border":"none",
-                  "align":"bottom"
-               },
-               "sections":[
-                  {
-                     "items":{
-                        "{{#each $jason.messages}}":{
-                           "type":"horizontal",
-                           "style":{
-                              "spacing":"10"
-                           },
-                           "components":[
-                              {
-                                 "type":"image",
-                                 "url":"{{avatar}}",
-                                 "style":{
-                                    "width":"30",
-                                    "height":"30",
-                                    "corner_radius":"15"
-                                 }
-                              },
-                              {
-                                 "type":"label",
-                                 "style":{
-                                    "font":"Courier",
-                                    "size":"14"
-                                 },
-                                 "text":"{{text}}"
-                              }
-                           ]
+      },
+      "body":
+        "sections":[
+            {
+                "items":[{
+                    "type":"map",
+                    "region":{
+                        "coord":"40.7197614,-73.9909211",
+                        "width":"100",
+                        "height":"100"
+                    },
+                    "style":{
+                        "width":"100%",
+                        "height":"300"
+                    }
+                },{
+                    "type":"button",
+                    "text":"Get GPS",
+                    "style":{
+                        "size":"40",
+                        "font":"HelveticaNeue-CondensedBold",
+                        "color":"#000000"
+                    },
+                    "action":{
+                        "type":"$get.geo",
+                        "options":{
+                            "distance":"1000"
+                        },
+                        "success":{
+                            "type":"$util.alert",
+                            "title":"Captured GPS Coordinates",
+                            "description":"{{$jason.coord}}"
                         }
-                     }
-                  }
-               ],
-               "footer":{
-                  "input":{
-                     "name":"message",
-                     "right":{
-                        "action":{
-                           "trigger":"say"
-                        }
-                     }
-                  }
-               }
+                    }
+                }]
             }
-         }
-      }
+        ]
    }
 }
