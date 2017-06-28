@@ -11,7 +11,7 @@
                     "distance": "1000"
                 },
                 "success": {
-                    "type": "$util.alert",
+                    "type": "$util.banner",
                     "options": {
                         "title": "GPS Position",
                         "description": "{{$jason.coord}}"
