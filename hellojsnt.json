@@ -1,15 +1,29 @@
-[{
-    "name":"Mehmet Fatih",
-    "surname":"KILIÇ",
-    "phone":"05337460608"
-}, {
-"name":"Ali Serdar",
-"surname":"KILIÇ",
-"phone":"05332083019",
-},{
-"name":"Hasan",
-"surname":"EFE",
-"phone":"05331232323",
-}]
+{
+    "$jason":{
+        "head":{
+            "title":"This is head title",
+            "description":"This is head desc.",
+            "offline":"true",
+            "icon":"https://s3.amazonaws.com/jasonclient/hello.png",
+            "style":{
+                "font":"Helvetica",
+                "size":"20",
+                "color":"#ff0000",
+                "padding":"10"
+            }
+        }, 
+        "body":{
+            "sections":[{
+                "items":[{
+                    "type":"label",
+                    "text":"This is my text label",
+                    "style": {
+                        "size":"10"
+                    }
+                }]
+            }]
+        }
+    }
+}
     
 
