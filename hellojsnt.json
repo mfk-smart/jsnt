@@ -4,7 +4,7 @@
             "title": "Right Here",
             "description": "Searching anything nearby, links to yelp, google streetview and foursquare"
         },
-        "actions": [{
+        "actions": {
             "get_coord": {
                 "type":"$geo.get",
                 "options": {
@@ -18,7 +18,7 @@
                     }
                 }
             }
-        }],
+        },
         "body": {
             "sections": [{
                 "items": [{
