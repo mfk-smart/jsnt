@@ -16,6 +16,9 @@
         "body": {
             "sections": [{
                 "items": [{
+                    "type":"label",
+                    "text":"v0.1a",
+                }, {
                     "type": "map",
                     "region": {
                         "coord": "40.7197614,-73.9909211",
