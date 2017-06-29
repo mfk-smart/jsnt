@@ -6,17 +6,11 @@
         },
         "actions": {
             "get_coord": {
-                "type":"$geo.get",
-                "options": {
-                    "distance": "1000"
-                },
-                "success": {
                     "type": "$util.banner",
                     "options": {
                         "title": "GPS Position",
                         "description": "{{$jason.coord}}"
                     }
-                }
             }
         },
         "body": {
