@@ -18,6 +18,13 @@
                 },
                 "$foreground":{
                     "type":"$render"
+                },
+                "show_alert": {
+                    "type": "$util.alert",
+                    "options": {
+                        "title": "Identity",
+                        "description": "M. Fatih KILIÇ"
+                    }
                 }
             },
         },
@@ -25,7 +32,7 @@
             "sections": [{
                 "items": [{
                     "type":"label",
-                    "text":"v0.1b",
+                    "text":"v0.1c",
                 }, {
                     "type": "map",
                     "region": {
@@ -56,12 +63,8 @@
                         "font": "HelveticaNeue-CondensedBold",
                         "color": "#000000"
                     },
-                    "action": {
-                        "type": "$util.alert",
-                        "options": {
-                            "title": "Identity",
-                            "description": "M. Fatih KILIÇ"
-                        }
+                    "action":{
+                        "trigger": "show_alert"
                     }
                 }]
             }]
