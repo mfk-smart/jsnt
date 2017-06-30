@@ -28,14 +28,24 @@
                         "title": "Identity",
                         "description": "M. Fatih KILIÇ"
                     }
+                },
+                "get_coord": {
+                    "type": "$geo.get",
+                    "success":{
+                        "type": "$util.banner",
+                        "options": {
+                            "title": "Konum",
+                            "description": "{{$jason.coord}}"
+                        }
+                    } 
                 }
-            },
+            }
         },
         "body": {
             "sections": [{
                 "items": [{
                     "type":"label",
-                    "text":"v0.1e",
+                    "text":"v0.1f",
                 }, {
                     "type": "map",
                     "region": {
