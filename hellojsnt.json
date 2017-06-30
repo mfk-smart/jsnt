@@ -26,7 +26,7 @@
                     "type": "$util.alert",
                     "options": {
                         "title": "Identity",
-                        "description": "M. Fatih KILIÇ"
+                        "description": "{{$get.gpos}} --> M. Fatih KILIÇ"
                     }
                 },
                 "get_coord": {
@@ -36,7 +36,7 @@
                         "type": "$util.banner",
                         "options": {
                             "title": "Konum",
-                            "description": "{{$get.gpos}}"
+                            "description": "{{$jason.coord}}"
                         }
                     } 
                 }
