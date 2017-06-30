@@ -2,22 +2,30 @@
     "$jason": {
         "head": {
             "title": "Right Here",
-            "description": "Searching anything nearby, links to yelp, google streetview and foursquare"
-        },
-        "actions": {
-            "get_coord": {
-                    "type": "$util.banner",
-                    "options": {
-                        "title": "GPS Position",
-                        "description": "{{$jason.coord}}"
+            "description": "Searching anything nearby, links to yelp, google streetview and foursquare",
+            "actions": {
+                "$load":{
+                    "type":"$network.request",
+                    "optons":{
+                        "url":"https://raw.github.com/mfk-smart/jsnt/master/hellojsnt.json"
+                    },
+                    "success":{
+                        "type":"$render"
                     }
-            }
+                },
+                "$show":{
+                    "type":"$render"
+                },
+                "$foreground":{
+                    "type":"$render"
+                }
+            },
         },
         "body": {
             "sections": [{
                 "items": [{
                     "type":"label",
-                    "text":"v0.1a",
+                    "text":"v0.1b",
                 }, {
                     "type": "map",
                     "region": {
