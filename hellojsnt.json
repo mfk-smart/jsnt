@@ -46,7 +46,7 @@
             "sections": [{
                 "items": [{
                     "type":"label",
-                    "text":"v0.1h",
+                    "text":"v0.1i",
                 }, {
                     "type": "map",
                     "region": {
@@ -80,6 +80,17 @@
                     "action":{
                         "trigger": "show_alert"
                     }
+}, {
+                    "type": "button",
+                    "text": "Get Biges",
+                    "style": {
+                        "size": "40",
+                        "font": "HelveticaNeue-CondensedBold",
+                        "color": "#000000"
+                    },
+                    "action":{
+                        "trigger": "show_alert"
+                    }                    
                 }]
             }]
         }
